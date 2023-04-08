@@ -6,7 +6,7 @@ function MovieList() {
   const [movieData, setmovieData] = useState<Movie[]>([]);
   useEffect(() => {
     const fetchMovie = async () => {
-      const rsp = await fetch('https://localhost:7211/movie');
+      const rsp = await fetch('https://localhost:4000/movie');
       const temp = await rsp.json();
       setmovieData(temp);
     };
