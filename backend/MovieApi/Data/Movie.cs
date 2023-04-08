@@ -9,7 +9,7 @@ namespace MovieApi.Data
         [Key]
         [Required]
         public int? MovieId { get; set; }
-        public string?  { get; set; }
+        public string? Category { get; set; }
         public string? Title { get; set; }
         public int? Year { get; set; }
         public string? Director { get; set; }
