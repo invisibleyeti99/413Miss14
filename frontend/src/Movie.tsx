@@ -4,8 +4,10 @@
 import { useState } from 'react';
 import data from './MovieData.json';
 import{ useNavigate } from 'react-router-dom'
+import MovieList from './Movie/MovieList';
+
 const mds = data.MovieData;
-function MovieList() {
+function MovieThing() {
     const navigate = useNavigate();
   
     const goToSecondsComp = () => {
@@ -45,31 +47,8 @@ function MovieList() {
       <div>
         <h3>Joel Hilton's Movie Collection</h3>
       </div>
-      <div>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Year</th>
-              <th>Director</th>
-              <th>Rating</th>
-              <th>Cateogry</th>
-            </tr>
-          </thead>
-          <tbody>
-            {mds.map((m) => (
-              <tr>
-                <td>{m.Title}</td>
-                <td>{m.Year}</td>
-                <td>{m.Director}</td>
-                <td>{m.Rating}</td>
-                <td>{m.Category}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <MovieList/>
     </>
   );
 }
-export default MovieList;
+export default MovieThing;
